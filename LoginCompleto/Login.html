@@ -30,26 +30,26 @@
             let email = formu.querySelector("[name='email']").value;
             let password = formu.querySelector("[name='password']").value;
 
-            // Envía una solicitud AJAX al archivo login.php
+            
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "login.php", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.status === 200) {
-                        // Respuesta recibida del servidor
+                        
                         let response = xhr.responseText;
                         if (response === "success") {
-                            // Si las credenciales son correctas, redirige al usuario a la página de bienvenida
+                            
                             window.location.href = "carritoDelete/index.html";
                         } else {
-                            // Si las credenciales son incorrectas, muestra un alert con el mensaje de error
+                            
                             let errorContainer = document.getElementById("error-container");
                             errorContainer.innerHTML = '<p class="error-message">Credenciales incorrectas. Inténtalo de nuevo.</p>';
 							pass.value = ""
                         }
                     } else {
-                        // Error en la solicitud AJAX
+                        
                         console.error("Error en la solicitud AJAX");
                     }
                 }
