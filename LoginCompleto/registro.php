@@ -46,13 +46,11 @@ if (isset($_POST["nombrea"]) && isset($_POST["emaila"])) {
 	$instruccion = "SELECT * FROM usuarios WHERE email = '$email'";
 	$instruccion = "SELECT * FROM usuarios WHERE nombre = '$nombre'";
 	$resultado = mysqli_query($connection, $instruccion);
-	if (mysqli_num_rows($resultado) == 0) {
-		// Si no existe un registro con el mismo correo electrónico, insertar el nuevo registro
+	if (mysqli_num_rows($resultado) == 0) {
 		$instruccion = "INSERT INTO usuarios (nombre,email) VALUES ('$nombre','$email')";
 		$resultado = mysqli_query($connection, $instruccion);
 		echo "Listo";
-	} else {
-		// Si ya existe un registro con el mismo correo electrónico, mostrar un mensaje de error
+	} else {
 		echo "El correo electrónico ya está registrado en la base de datos.";
 	}
 }
