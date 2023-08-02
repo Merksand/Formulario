@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background: #567;
+}
+
+.form-register {
+    width: 450px;
+    background: #122;
+    padding: 30px 35px;
+    margin: 20px auto;
+    border-radius: 4px;
+    font-family: "calibri";
+    color: white;
+    box-shadow: 10px 23px 30px #000;
+    border-radius: 10px;
+    margin-bottom: 4px;
+
+
+    
+}
+
+.form-register h4 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+    animation: bounce; 
+    animation-duration: 2s;
+}
+
+.controls {
+    width: 100%;
+    background: #24303c;
+    padding: 15px;
+    border-radius: 3px;
+    margin-bottom: 13px;
+    border: 1px solid #1f53c5;
+    font-family: "calibri";
+    font-size: 18px;
+    color: white;
+}
+
+.controls:focus{
+    outline: none;
+  color: #ffffff;
+  box-shadow: 0 0 5px rgba(0,255,0,.2),
+              inset 0 0 5px rgba(0,255,0,.1);
+  background: linear-gradient(#333933,#222922);
+  animation: glow .8s ease-out infinite alternate;
+}
+@keyframes glow {
+   0%{
+    border-color: #1dd6cd;
+    box-shadow: 0 0 5px rgba(40, 29, 88, 0.959),
+                inset 0 0 5px rgba(0,0,0,.1);
+  }
+   100%{
+    border-color: rgb(48, 111, 119);
+    box-shadow: 0 0 20px rgba(103, 122, 109, 0.993),
+                inset 0 0 10px rgb(22, 54, 235);
+  }
+}
+
+
+.form-register p {
+    height: 45px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 45px;
+    font-size: 18px;
+}
+
+.form-register a {
+    color: white;
+    text-decoration: none;
+}
+
+.boton {
+    width: 100%;
+    font-size: 15px;
+    background: #1f53c5;
+    border: none;
+    padding: 13px;
+    color: white;
+    margin: 16px 0px;
+    font-size: 17px;
+	border-radius: 5px;
+
+
+}
